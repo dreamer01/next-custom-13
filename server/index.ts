@@ -1,4 +1,3 @@
-// For Myx Libs
 import express, { Request, Response } from 'express';
 import { parse } from 'url';
 import next from 'next';

@@ -3,10 +3,10 @@
   "compilerOptions": {
     "module": "commonjs",
     "outDir": "dist",
-    "target": "es2017",
+    "lib": ["es2019"],
+    "target": "es2019",
     "isolatedModules": false,
-    "noEmit": false,
-    "typeRoots": ["server/types"]
+    "noEmit": false
   },
   "include": ["server/**/*.ts"]
 }
