@@ -1,7 +1,8 @@
+import Link from 'next/link';
 import Styles from './page.module.css';
 
 const getData = async () => {
-  const response = await fetch('http://localhost:3000/api/hello', {});
+  const response = await fetch('http://localhost:3000/api/hello');
   if (response.ok) {
     // throw new Error('Is Error Boundary Present');
     return response.json();
@@ -20,6 +21,8 @@ export default async function Home() {
           </a>
         </h1>
       </main>
+      <Link href='/a'> Page A </Link>
+      <Link href='/b'> Page B </Link>
     </div>
   );
 }

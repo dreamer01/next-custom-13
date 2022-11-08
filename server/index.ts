@@ -10,6 +10,16 @@ const handle = nextApp.getRequestHandler();
 nextApp.prepare().then(() => {
   const app = express();
 
+  app.get('/a/*', (req: Request, res: Response) => {
+    const parsedUrl = parse(req.url!, true);
+    handle(req, res, parsedUrl);
+  });
+
+  app.get('/b/*', (req: Request, res: Response) => {
+    const parsedUrl = parse(req.url!, true);
+    handle(req, res, parsedUrl);
+  });
+
   app.get('*', (req: Request, res: Response) => {
     const parsedUrl = parse(req.url!, true);
     handle(req, res, parsedUrl);

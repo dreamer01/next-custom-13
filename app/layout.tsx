@@ -1,3 +1,4 @@
+import Counter from '../components/counter';
 import './globals.css';
 
 export default function RootLayout({
@@ -10,6 +11,7 @@ export default function RootLayout({
       <head />
       <body>
         <h1> I am from Layout</h1>
+        <Counter />
         {children}
       </body>
     </html>
